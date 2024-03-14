@@ -1,6 +1,7 @@
 package fr.morin.math;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Fibonacci {
     private ArrayList<Long> resulFibonacci = new ArrayList<Long>();
@@ -25,29 +26,41 @@ public class Fibonacci {
     }
 
     public boolean isInFibo(long number) {
-        if (resulFibonacci.contains(number)){
+        if (resulFibonacci.contains(number)) {
             System.out.println(resulFibonacci.indexOf(number));
             return true;
         }
         return false;
     }
-    public void numbPairImpair(ArrayList<Long> fibonacciN){
+
+    public void numbPairImpair(ArrayList<Long> fibonacciN) {
         int pai = 0;
         int imp = 0;
         for (int i = 0; i < fibonacciN.size(); i++) {
-            if (fibonacciN.get(i)%2==0){
-                pai = pai+1;
-            }
-            else {
-                imp = imp+1;
+            if (fibonacciN.get(i) % 2 == 0) {
+                pai = pai + 1;
+            } else {
+                imp = imp + 1;
             }
         }
-        System.out.println("Nombre de résultat pair : "+pai);
-        System.out.println("Nombre de résultat impair : "+imp);
+        System.out.println("Nombre de résultat pair : " + pai);
+        System.out.println("Nombre de résultat impair : " + imp);
     }
 
+    public int dernierPlusPetit(long number) {
+        for (int i = 0; i < resulFibonacci.size(); i++) {
+            if (resulFibonacci.get(i+1)>=number) {
+                return i;
+            }
+        }
+        return 0;
+    }
+    public void shuffleFibo(ArrayList<Long> FibonacciN){
+        Collections.shuffle(FibonacciN);
+    }
 
-
-
+    public void sortFibo(ArrayList<Long> FibonacciN){
+        Collections.sort(FibonacciN);
+    }
 
 }
