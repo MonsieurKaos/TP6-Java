@@ -1,5 +1,6 @@
 import fr.morin.math.Fibonacci;
 import fr.morin.ps4.*;
+import fr.morin.note.*;
 import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
@@ -46,6 +47,11 @@ public class Main {
         //Exercice 3
 
 
+        //Exercice 4 complementaire
+
+        matiere M1 = new matiere("Math",10);
+        ListeDeNotes L1 = new ListeDeNotes();
+        Etudiants E1 = new Etudiants("Mael");
 
     }
 }
